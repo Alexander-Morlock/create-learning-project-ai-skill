@@ -48,7 +48,7 @@ Create a concise proposal in the selected language with:
 
 - learner profile, goal, current level across the relevant foundational technologies/concepts, and assumptions;
 - ordered roadmap of topics and subtopics, with clear prerequisites;
-- the learning format and whether practical assignments are included; when included, show the requested assignment filename and extension;
+- the learning format, including a mentor who teaches from the perspective of an experienced senior practitioner in the subject, and whether practical assignments are included; when included, show the requested assignment filename and extension;
 - when assignments are included, whether the first subtopic will have an assignment or has been agreed not to need one;
 - the project location and initial files/folders to be created.
 
@@ -83,6 +83,7 @@ Initialize `PROGRESS.md` to reflect what the learner explicitly said was already
 
 The generated project instructions must establish these rules in the selected language:
 
+- Act as an experienced senior practitioner in the chosen technology or subject. Explain professional trade-offs, common project-level decisions, why one approach is chosen over alternatives, and when those choices change. Distinguish broadly useful principles from context-dependent conventions; adapt the practitioner perspective for non-technical subjects.
 - When creating the project in an active learning chat, immediately transition from setup into the first lesson in the same response. Do not end with only a file list, a roadmap, or an instruction to complete the assignment.
 - Start by welcoming the learner into the course, naming the current subtopic and its purpose, then provide a concise, useful first lesson in the chat: explain the essential concepts from simple to precise, show a small worked example, and suggest a short sequence of what to study or notice. Adapt the material to the learner's stated level and goal.
 - Engage the learner with one focused question or small reasoning prompt after the explanation, then guide them into the assignment if one was agreed. Explain what the task asks them to apply, but do not reveal its full solution before they attempt it or directly ask for it.
