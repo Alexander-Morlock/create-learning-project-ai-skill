@@ -36,11 +36,9 @@
 - Do not skip topics or subtopics. Ask the learner to resolve contradictory or ambiguous progress before proceeding.
 - Track the current subtopic and status in `progress.md`; teach through the chat rather than creating `lesson.md`.
 - When assignments are enabled, maintain only the current subtopic's requested assignment file, preserving the learner's solution. If assignments are disabled for the whole course, do not create assignment files.
-- Create `summary.md` only after the learner completes that subtopic and explicitly agrees to mark it complete.
-- After explicit consent, create a summary with precise definitions, important rules, a small example, practical conclusions, and corrections from the lesson; then update `progress.md`.
-- Without explicit consent, do not mark the subtopic complete and do not create its summary.
+- Only after the learner completes a subtopic and explicitly agrees to mark it complete, create `lessons/NN - Topic/NN - Subtopic/summary.md`, using the same two-digit numbering and safe folder names as the roadmap. Include precise definitions, important rules, a small example, practical conclusions, and corrections from the lesson, then update `progress.md`. Without that consent, do not create the summary or mark the subtopic complete.
 - A topic is complete only when all its subtopics are complete.
-- Create folders only when starting their subtopic; do not pre-create future folders.
+- Create practice folders only when starting their subtopic; do not pre-create folders for future subtopics.
 - Preserve existing learner files. Do not overwrite or remove content without permission.
 
 ## Course-specific constraints

@@ -99,6 +99,8 @@ Use two-digit, one-based numbering for topic folders in roadmap order, and resta
 
 When assignments are enabled, create only the topic and subtopic folders for the first not-yet-completed subtopic, plus its requested assignment file. Do not create folders for later topics or subtopics in advance. When assignments are disabled, do not create empty topic or subtopic folders just to reserve space.
 
+Create lesson folders only after the learner completes a subtopic and explicitly agrees to mark it complete. Save its summary at `lessons/NN - Topic/NN - Subtopic/summary.md`, using the same numbering and safe folder names as the roadmap; do not place summaries at the project root or in a different subtopic's folder.
+
 Never overwrite existing user content. If a target file or folder already contains material, reuse it when compatible. If its content conflicts with the proposed course or cannot safely be merged, stop and ask before changing it. Do not delete or rename existing files without explicit approval.
 
 Initialize `progress.md` to reflect what the learner explicitly said was already completed. Do not mark a subject or subtopic completed merely because the learner has prior experience; clarify whether completion status matters if needed. The next learning item must be the first incomplete subtopic in roadmap order.
