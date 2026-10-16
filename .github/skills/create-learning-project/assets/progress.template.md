@@ -12,7 +12,7 @@
 ## Status
 
 - Completed topics and subtopics: {{explicitly_completed_or_none}}
-- Current subtopic: {{first_incomplete_subtopic}}
+- Current subtopic: {{in_progress_subtopic_or_none}}
 - Next subtopic: {{first_incomplete_subtopic}}
 - Assignment status, if included: {{not_needed_not_started_in_progress_or_complete}}
 

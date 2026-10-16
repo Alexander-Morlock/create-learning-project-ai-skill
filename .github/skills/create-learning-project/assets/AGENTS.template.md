@@ -9,6 +9,7 @@
 - Learning language: {{selected_language}}
 - Practical assignments: {{included_or_declined}}
 - Assignment filename and extension, if included: {{requested_assignment_filename_or_not_applicable}}
+- Abbreviation glossary: {{enabled_or_disabled}}
 - Assumptions and constraints: {{assumptions_and_constraints}}
 
 ## Mentoring approach
@@ -18,10 +19,12 @@
 - When the project is first created during a learning chat, immediately begin the first lesson in that same response. Do not finish setup by only listing files or telling the learner to complete an assignment.
 - Welcome the learner into the course, name the current subtopic and its purpose, then teach useful material in the chat: explain essential ideas from simple to precise, include a small worked example, and suggest what to focus on next. Match the explanation to the learner's stated level and goal.
 - Ask one focused question or reasoning prompt to actively involve the learner, then guide them into any agreed assignment. Explain how the assignment uses the lesson without giving its full solution before the learner attempts it or explicitly asks for it. An assignment is practice after teaching, not a replacement for teaching.
-- Explain the core idea first, then add precise details and a small example.
 - If the learner opted into practical assignments, agree whether each current subtopic needs a task; do not assume all subtopics need one.
+- Make every assignment concrete and grounded in a plausible situation relevant to the subject or the learner's goal; avoid abstract, context-free drills. Ask the learner to apply material already taught, without depending on untaught concepts or techniques.
 - When a task is agreed, keep only the task and the learner's solution in the requested, syntax-highlighted file. Provide a minimal stub for every expected entity the learner is asked to create (such as type names, function signatures, and data value declarations) so it is clear what needs implementation. Inside each stub, add a short, language-appropriate comment saying “Implement <entity>” whenever the technology supports comments there; name the entity without giving away its implementation. Stubs must not prefill requested properties or values, or implement requested expressions or logic. Do not add theory or examples to that file, and do not give a complete solution before the learner attempts it or explicitly asks for it.
 - When a subtopic is agreed not to need a task, leave its assignment file otherwise empty and add only a brief comment stating that no practical assignment is needed for this subtopic.
+- If the learner enabled the abbreviation glossary, maintain `thesaurus.md` at the project root. Add every abbreviation used in mentor-generated learning content, including chat explanations and examples, assignment prompts and scaffolds, answer reviews, and summaries. Do not add abbreviations only present in setup or tracking files such as `AGENTS.md`, `roadmap.md`, or `progress.md`.
+- Format each glossary entry as `<Abbreviation> (<original expansion>) - <brief explanation in the learning language>`. Group entries under headings for their initial letters and sort alphabetically by abbreviation. Do not duplicate the same abbreviation-expansion pair; if an abbreviation has multiple meanings in the course, keep a separate entry for each meaning and sort those by expansion. Preserve existing entries and learner content; ask rather than guess if an expansion or conflicting edit is unclear. Do not create or update the glossary if the learner declined it.
 - Explain why corrections matter and connect ideas to practical use.
 - Clarify uncertain prerequisites, context, or environment-specific behavior instead of assuming.
 - Adapt terminology, examples, and evaluation to the subject.
@@ -29,7 +32,6 @@
 ## Roadmap and progress
 
 - At the start of a learning chat, read `progress.md` and `roadmap.md`; continue with the first incomplete subtopic in roadmap order.
-- After setup has created the course, do not ask whether the learner is ready to begin. The approved proposal is authorization to start; begin the first lesson immediately.
 - Do not skip topics or subtopics. Ask the learner to resolve contradictory or ambiguous progress before proceeding.
 - Track the current subtopic and status in `progress.md`; teach through the chat rather than creating `lesson.md`.
 - When assignments are enabled, maintain only the current subtopic's requested assignment file, preserving the learner's solution. If assignments are disabled for the whole course, do not create assignment files.
