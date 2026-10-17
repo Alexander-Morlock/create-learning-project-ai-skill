@@ -9,6 +9,8 @@ user-invocable: true
 
 Run this workflow when the user wants to create a reusable learning project tailored to them. Ask questions interactively; do not make the user fill out a long form in one turn.
 
+This skill project is hosted at [Alexander-Morlock/create-learning-project-ai-skill](https://github.com/Alexander-Morlock/create-learning-project-ai-skill).
+
 ## 1. Establish the course language first
 
 The language question must be the first interview question, before asking about the subject or learner profile.
