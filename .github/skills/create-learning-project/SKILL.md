@@ -73,6 +73,7 @@ Create a concise proposal in the selected language with:
 - the learning format, including a mentor who teaches from the perspective of an experienced senior practitioner in the subject, and whether practical assignments are included; when included, show the requested assignment filename and extension;
 - when assignments are included, whether the first subtopic will have an assignment or is recommended to skip one, with a brief reason; record the learner's decision before creating its file;
 - whether the learner opted into the automatically maintained abbreviation glossary and, if so, that `thesaurus.md` will be created at the project root;
+- that `update-learning-rules.ps1` will be added to the project root so shared learning rules can later be refreshed from the repository named in this file's `This skill project is hosted at ...` link;
 - if npm setup was requested, the exact minimal package names, their purpose, and the project location where they will be installed;
 - if an official project generator was accepted, the exact official command, what it will generate, and its destination;
 - the project location and initial files/folders to be created.
@@ -94,6 +95,7 @@ If the learner approved an official boilerplate or project-generation script in 
 Create or update the following course files in the selected learning language:
 
 - `AGENTS.md`: learner profile, mentor role, language, tutoring approach, progress rules, and course-specific constraints.
+- `update-learning-rules.ps1`: safe updater that downloads a versioned copy of the shared learning rules from the repository named in the hosting link above. It stages the source under `.learning-rules\incoming\` and never edits `AGENTS.md` itself.
 - `roadmap.md`: ordered topics and their subtopics, using exact titles consistently.
 - `progress.md`: initial learner context and explicit status of completed, in-progress, and next items.
 - If practical assignments were accepted, create the first assignment only after applying the usefulness and reason-specific decision rules above and receiving the learner's decision. Use `practice/NN - Topic/NN - Subtopic/<learner-requested-filename>`.
@@ -116,6 +118,15 @@ Never overwrite existing user content. If a target file or folder already contai
 Initialize `progress.md` to reflect what the learner explicitly said was already completed. Do not mark a subject or subtopic completed merely because the learner has prior experience; clarify whether completion status matters if needed. The next learning item must be the first incomplete subtopic in roadmap order.
 
 When the abbreviation glossary is enabled, follow the glossary-maintenance rules in the generated `AGENTS.md` for the initial lesson and throughout the course. Do not create or update `thesaurus.md` when the learner declined it.
+
+### Synchronizing shared learning rules
+
+- Keep common mentoring, roadmap/progress, and safe-file-handling guidance in one `LEARNING-RULES` block in `AGENTS.md`, bounded by the exact `LEARNING-RULES:START` and `LEARNING-RULES:END` comments shown in `AGENTS.template.md`. Translate the block into the selected course language. Keep the learner profile and course-specific constraints outside the block.
+- Copy `assets\update-learning-rules.ps1` to the project root as `update-learning-rules.ps1`. Never overwrite an existing file with that name; stop and ask if it already exists.
+- Mark a newly generated block with `source=Alexander-Morlock/create-learning-project-ai-skill version=local` and set its `sha256` value to the SHA-256 of the block body between the marker lines, encoded as UTF-8 after normalizing line endings to LF. Keep this checksum current after every approved change; the updater refuses to proceed if the managed text no longer matches it.
+- When the learner requests an update, run `.\update-learning-rules.ps1` from the project. It verifies the downloaded Git blob hash and stages the source in `.learning-rules\incoming\<hash>.md`. It does not modify `AGENTS.md` or any course files.
+- Compare the staged source with the existing managed block. Translate changed guidance into the selected learning language, preserve the learner profile and all course-specific content, and show the proposed diff before applying it. Update the block's `version` value to the staged source hash and recompute its `sha256` value only when the learner approves the change.
+- For an older project without the markers, treat the update as a one-time migration. Identify only the shared mentoring, roadmap/progress, and safe-file-handling rules to move into the managed block; retain course-specific and learner-authored content. Present the migration diff and wait for approval before editing.
 
 ## 5. Verify and report
 
