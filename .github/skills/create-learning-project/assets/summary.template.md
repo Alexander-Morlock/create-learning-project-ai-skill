@@ -1,4 +1,8 @@
-# {{subtopic_title}} — Summary
+# {{subtopic_title}} — Lesson archive
+
+## Roadmap coverage
+
+{{explain_every_planned_item_and_learning_objective_for_this_subtopic}}
 
 ## Key concepts
 
