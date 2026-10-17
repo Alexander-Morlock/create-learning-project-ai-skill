@@ -16,6 +16,10 @@
 
 {{small_example}}
 
+## Source of referenced code
+
+{{if_code_is_quoted_adapted_or_discussed_from_a_source_identify_the_repository_or_website_file_or_path_and_version_or_commit_when_available;_omit_this_section_if_not_applicable}}
+
 ## Practical conclusions
 
 - {{practical_takeaway}}
