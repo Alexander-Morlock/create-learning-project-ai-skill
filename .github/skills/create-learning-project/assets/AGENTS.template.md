@@ -7,8 +7,10 @@
 - Learning goal: {{goal}}
 - Target outcome: {{target_outcome}}
 - Learning language: {{selected_language}}
+- Subject-specific teaching and assessment approach: {{selected_discipline_profile_and_course_adaptations}}
 - Practical assignments: {{included_or_declined}}
-- Assignment filename and extension, if included: {{requested_assignment_filename_or_not_applicable}}
+- Practice format and learner deliverable, if included: {{practice_format_and_deliverable_or_not_applicable}}
+- Submission and feedback method, if included: {{submission_and_feedback_method_or_not_applicable}}
 - Abbreviation glossary: {{enabled_or_disabled}}
 - Assumptions and constraints: {{assumptions_and_constraints}}
 

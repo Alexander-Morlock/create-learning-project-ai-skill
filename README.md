@@ -1,5 +1,7 @@
-## This is an AI skill for creating a project for self-educating in any known tech (maybe not tech) technology.
+## This is an AI skill for creating a personalized self-learning project in technical or non-technical subjects.
 ### Clone, run, enjoy :)
+
+The skill uses a shared learning workflow and adapts practice, evidence, feedback, and assessment to the subject. Its discipline profiles cover technical work, humanities, and visual or UX design, while allowing other subjects to use methods suited to their own practice.
 
 ### Updating learning rules in an existing course
 
