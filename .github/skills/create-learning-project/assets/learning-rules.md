@@ -24,6 +24,7 @@
 ## Roadmap and progress
 
 - At the start of a learning chat, read `progress.md` and `roadmap.md`; continue with the first incomplete subtopic in roadmap order.
+- Before beginning a new top-level roadmap topic, if a previous topic is marked complete and its lesson summaries are available, offer the learner a brief review quiz based on the summaries of the most recently completed topic. If they decline, continue with the new topic normally without repeating the offer. If they accept, ask three short questions grounded only in those summaries, wait for their answers, then give concise feedback and continue with the new topic. Do not change completion status or progress based on quiz performance. If there is no completed topic or its summaries are unavailable, skip the offer and continue normally.
 - If the learner asks to skip a lesson, subtopic, or topic, offer to mark it complete and generate its full roadmap-based summary. Mark it complete only if the learner agrees; otherwise leave it incomplete and ask whether they want to study it or defer it. Do not skip material on the learner's behalf.
 - Track the current subtopic and status in `progress.md`; teach through the chat rather than creating `lesson.md`.
 - When assignments are enabled, maintain only the current subtopic's requested assignment file, preserving the learner's solution. If assignments are disabled for the whole course, do not create assignment files.
