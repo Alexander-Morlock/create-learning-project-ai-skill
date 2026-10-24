@@ -1,0 +1,7 @@
+# {{localized_course_brief_title}}
+
+{{short_description_of_the_brief_and_that_it_is_based_on_lesson_summaries}}
+
+## Key ideas and conclusions
+
+{{when_no_summaries_exist_state_that_clearly; otherwise_synthesize_the_summaries_by_idea_or_theme_merge_repeated_or_overlapping_information_into_a_single_entry_add_only_new_details_and_link_each_entry_to_all_relevant_summaries_using_relative_paths}}

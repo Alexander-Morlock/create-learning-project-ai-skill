@@ -74,6 +74,7 @@ Create a concise proposal in the selected language with:
 
 - learner profile, goal, current level across the relevant foundational technologies/concepts, and assumptions;
 - ordered roadmap of topics and subtopics, with clear prerequisites;
+- that a concise `brief.md` will be created at the project root as a cumulative brief based on lesson summaries and updated whenever a new lesson summary is created;
 - the selected subject-specific practice and assessment approach, adapted from `discipline-profiles.md`;
 - the learning format, including a mentor who teaches from the perspective of an experienced senior practitioner in the subject, and whether practical assignments are included; when included, show the practice formats, learner deliverables, submission/feedback method, and any workspace filename that is actually needed;
 - when assignments are included, whether the first subtopic will have an assignment or is recommended to skip one, with a brief reason; record the learner's decision before creating its file;
@@ -103,6 +104,7 @@ Create or update the following course files in the selected learning language:
 - `update-learning-rules.ps1`: safe updater that downloads a versioned copy of the shared learning rules from the repository named in the hosting link above. It stages the source under `.learning-rules\incoming\` and never edits `AGENTS.md` itself.
 - `roadmap.md`: ordered topics and their subtopics, using exact titles consistently.
 - `progress.md`: initial learner context and explicit status of completed, in-progress, and next items.
+- `brief.md`: a concise, cumulative brief of the available lesson summaries, created once at the project root. Start with the localized structure in `brief.template.md`; when there are no lesson summaries yet, state that clearly.
 - If practical assignments were accepted, create the first assignment only after applying the usefulness and reason-specific decision rules above and receiving the learner's decision. Use a suitable artifact for the task: a syntax-highlighted file for code, a writing or analysis document when the learner is expected to compose text, or a concise `assignment.md` brief for work created in an external tool or another non-file activity. Do not create solution files or folders that the agreed task does not need.
 - If the learner opted into the abbreviation glossary, create `thesaurus.md` at the project root, alongside `roadmap.md`. Start with a localized title equivalent to “Abbreviation Glossary”; add letter headings and entries as abbreviations are encountered in learning content.
 
@@ -117,6 +119,8 @@ Use two-digit, one-based numbering for topic folders in roadmap order, restartin
 When assignments are enabled, create only the topic and subtopic folders for the first not-yet-completed subtopic, plus the agreed assignment artifact if it belongs in the course workspace. Do not create folders for later topics or subtopics in advance. When assignments are disabled, do not create empty topic or subtopic folders just to reserve space.
 
 Whenever a lesson concludes or the learner chooses to skip its lesson/subtopic, create the summary only inside that lesson's own subtopic folder, at `lessons/NN - Topic/NN - Subtopic/summary.md` relative to the project root; never in the project root, directly under `lessons`, or in another lesson's folder. Use the numbering and safe folder names defined above. The summary is the complete lesson archive, not a chat transcript: cover every roadmap item, including skipped or undiscussed material, and incorporate chat-based corrections and clarifications. Independently fill gaps with explanations and useful examples, consulting reliable sources when needed. Whenever the summary relies on, quotes, adapts, or discusses external source material, identify the source explicitly in or next to the summary (for example, title or organization, URL or file/path, and publication date or version when available); do not leave the source of evidence implicit. Do not imply that archived material was studied or mastered merely because it is included.
+
+Whenever you create a lesson summary, update the root `brief.md` in the same operation. Synthesize it with the existing brief and all available summaries: merge repeated or overlapping ideas into a single clear entry, add only genuinely new details, and retain meaningful distinctions between lessons without restating shared content. Cite or link the relevant summary paths for each entry; a summary may support multiple entries, and an entry may cite multiple summaries. Keep the brief concise, reconcile it against all summaries so corrections are reflected, and preserve learner-authored content. Base it only on summaries; do not add unsupported claims or imply mastery. If the existing brief cannot be safely reconciled, ask before changing it.
 
 Never overwrite existing user content. If a target file or folder already contains material, reuse it when compatible. If its content conflicts with the proposed course or cannot safely be merged, stop and ask before changing it. Do not delete or rename existing files without explicit approval.
 
@@ -145,5 +149,6 @@ Use the following templates as structural guidance, adapting their placeholders 
 - [discipline-profiles.md](./assets/discipline-profiles.md)
 - [roadmap.template.md](./assets/roadmap.template.md)
 - [progress.template.md](./assets/progress.template.md)
+- [brief.template.md](./assets/brief.template.md)
 - [practice.template.md](./assets/practice.template.md)
 - [thesaurus.template.md](./assets/thesaurus.template.md)
